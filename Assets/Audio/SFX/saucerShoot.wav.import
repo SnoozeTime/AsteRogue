@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/saucerShoot.wav-e35f6ef79b1f3c45a4ddc9cbd4df52b0.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/saucerShoot.wav"
+dest_files=[ "res://.import/saucerShoot.wav-e35f6ef79b1f3c45a4ddc9cbd4df52b0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

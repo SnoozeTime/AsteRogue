@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Main/Shop/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/turret_base.png" type="Texture" id=2]
+[ext_resource path="res://Assets/turret_canon.png" type="Texture" id=3]
+[ext_resource path="res://Main/Shop/TurretBehavior.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "New Anim"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect2:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 180.0, 360.0 ]
+}
+
+[node name="TurretCard" instance=ExtResource( 1 )]
+is_turret = true
+base_gold_value = 5
+
+[node name="Label" parent="." index="0"]
+text = "+Turret"
+
+[node name="Behavior" parent="." index="3"]
+script = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="." index="4"]
+margin_left = 63.4961
+margin_top = 102.387
+margin_right = 116.496
+margin_bottom = 155.387
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="." index="5"]
+margin_left = 91.2756
+margin_top = 115.88
+margin_right = 159.276
+margin_bottom = 168.88
+rect_rotation = 291.592
+rect_pivot_offset = Vector2( 0.648346, 8.17542 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TurretPlayer" type="AnimationPlayer" parent="." index="6"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 1 )

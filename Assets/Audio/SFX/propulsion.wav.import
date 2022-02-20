@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/propulsion.wav-b5080112d1630261c53e7ee17f67a855.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/propulsion.wav"
+dest_files=[ "res://.import/propulsion.wav-b5080112d1630261c53e7ee17f67a855.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

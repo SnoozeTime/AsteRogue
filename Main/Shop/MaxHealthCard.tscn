@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Main/Shop/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main/Shop/MaxHealthBehavior.gd" type="Script" id=2]
+[ext_resource path="res://Assets/heart.png" type="Texture" id=3]
+
+[node name="MaxHealth" instance=ExtResource( 1 )]
+base_gold_value = 4
+
+[node name="Label" parent="." index="0"]
+margin_left = 0.0944805
+margin_top = 281.349
+margin_right = 193.094
+margin_bottom = 385.349
+text = "+2 MAX HP"
+
+[node name="Behavior" parent="." index="3"]
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="." index="4"]
+margin_left = 41.2725
+margin_top = 90.4819
+margin_right = 146.272
+margin_bottom = 186.482
+texture = ExtResource( 3 )
+
+[node name="TextureRect2" type="TextureRect" parent="." index="5"]
+margin_left = 13.4929
+margin_top = 68.2583
+margin_right = 118.493
+margin_bottom = 164.258
+rect_scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 3 )

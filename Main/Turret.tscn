@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/turret_base.png" type="Texture" id=1]
+[ext_resource path="res://Assets/turret_canon.png" type="Texture" id=2]
+[ext_resource path="res://Main/Turret.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Audio/SFX/turretShoot.wav" type="AudioStream" id=4]
+
+[node name="Turret" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Base" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="Canon" type="Sprite" parent="."]
+position = Vector2( 0.140976, 0.214733 )
+rotation = 0.000514892
+texture = ExtResource( 2 )
+offset = Vector2( 33.8769, -0.214733 )
+
+[node name="AcquireTarget" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="ShootSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+bus = "SFX"
+[connection signal="timeout" from="AcquireTarget" to="." method="_on_AcquireTarget_timeout"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

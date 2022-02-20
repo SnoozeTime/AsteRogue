@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Main/Shop/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/counterboum.png" type="Texture" id=2]
+[ext_resource path="res://Main/Shop/CounterExplosionBehavior.gd" type="Script" id=3]
+
+[node name="CounterExplosionCard" instance=ExtResource( 1 )]
+is_counterzone = true
+base_gold_value = 8
+
+[node name="Label" parent="." index="0"]
+text = "Counter
+BOUM"
+
+[node name="Behavior" parent="." index="3"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="." index="4"]
+margin_left = 26.9858
+margin_top = 69.052
+margin_right = 158.986
+margin_bottom = 200.052
+texture = ExtResource( 2 )

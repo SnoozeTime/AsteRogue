@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Speed.png" type="Texture" id=1]
+[ext_resource path="res://Main/Shop/Card.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main/Shop/SpeedUpBehavior.gd" type="Script" id=3]
+
+[node name="SpeedUpCard" instance=ExtResource( 2 )]
+
+[node name="Label" parent="." index="0"]
+text = "SpeedUp"
+
+[node name="Behavior" parent="." index="3"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="." index="4"]
+margin_left = 36.5103
+margin_top = 100.006
+margin_right = 150.51
+margin_bottom = 160.006
+texture = ExtResource( 1 )
